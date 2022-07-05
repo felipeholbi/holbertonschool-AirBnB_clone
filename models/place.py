@@ -6,9 +6,7 @@ from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-    """
-    ...
-    """
+    """class Place that inherits from BaseModel """
     city_id = ""
     user_id = ""
     name = ""
@@ -22,5 +20,5 @@ class Place(BaseModel):
     amenity_ids = []
 
     def __init__(self, *args, **kwargs):
-        """Initialize Place"""
+        """Initialize Place class"""
         super().__init__(*args, **kwargs)

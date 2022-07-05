@@ -14,10 +14,10 @@ from models.state import State
 classe = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
           "Place": Place, "Review": Review, "State": State, "User": User}
 
+
 class FileStorage:
-    """
-    ...
-    """
+    """Define class FileStorage"""
+
     __file_path = "file.json"
     __objects = {}
 
@@ -25,7 +25,7 @@ class FileStorage:
         return self.__objects
 
     def new(self, obj):
-        self.__objects["{}.{}".format(obj.__class__.__name, obj.id)] =  obj
+        self.__objects["{}.{}".format(obj.__class__.__name, obj.id)] = obj
 
     def save(self):
         json_obj = {}
@@ -40,6 +40,5 @@ class FileStorage:
                 j = json.load(file)
             for key in j:
                 self.__objects[key] = classe[j[hey]["__class__"]](**j[key])
-        except:
+        except Exception:
             pass
-            
