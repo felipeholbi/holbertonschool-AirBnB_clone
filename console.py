@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """ this module is the command interpreter"""
 import cmd
-
+from models.base_model import BaseModel
+import json
 
 class HBNBCommand(cmd.Cmd):
     """develop methods"""

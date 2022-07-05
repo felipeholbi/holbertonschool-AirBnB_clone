@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-class BaseModel
-"""
+"""class BaseModel"""
 
 
 import models
@@ -13,8 +11,8 @@ class BaseModel:
     """
     ...
     """
-    def __init__(self, *args, **kwargs)
-    """Initialize BaseModel class"""
+    def __init__(self, *args, **kwargs):
+        """Initialize BaseModel class"""
 
     if kwargs:
         for key, value in kwargs.items():
