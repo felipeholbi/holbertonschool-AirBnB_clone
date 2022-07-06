@@ -13,9 +13,11 @@ from models.state import State
 classe = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
           "Place": Place, "Review": Review, "State": State, "User": User}
 
+
 class HBNBCommand(cmd.Cmd):
     """develop methods"""
-    prompt = '(hbnb)'
+    prompt = '(hbnb) '
+
 
     def do_EOF(self, line):
         """EOF: to exit the program"""
@@ -34,8 +36,36 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def do_create(self, line):
-        new_instance = BaseModel(None, line)
-        print(f"{new_instance}")
+        if line == "" or line is None:
+            print("** class name missing **")
+        elif line in classe.keys():
+            '''print("** eureka **")'''
+            new_instance = classe[line]()
+            new_instance.save()
+            print(new_instance.id)
+        else:
+            print("** class doesn't exist **")
+
+
+
+    def do_show(self, line):
+        if line == "" or line is None:
+            print("** class name missing **")
+        elif line not in HBNBCommand.classe:
+            print("** class doesn't exist **")
+    
+    def do_destroy(self, line):
+        if line == "" or line is None:
+            print("** class name missing **")
+        elif line not in HBNBCommand.classe:
+            print("** class doesn't exist **")
+    
+    def do_all(self, line):
+        if line not in HBNBCommand.classe:
+            print("** class doesn't exist **")
+    
+
+
 
 
 if __name__ == '__main__':
