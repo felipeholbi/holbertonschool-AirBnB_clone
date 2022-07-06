@@ -17,7 +17,7 @@ class HBNBCommand(cmd.Cmd):
     """develop methods"""
 
     classe = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
-          "Place": Place, "Review": Review, "State": State, "User": User}
+              "Place": Place, "Review": Review, "State": State, "User": User}
 
     prompt = '(hbnb) '
 
