@@ -12,12 +12,13 @@ from models.state import State
 from models import storage
 import shlex
 
-classe = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
-          "Place": Place, "Review": Review, "State": State, "User": User}
-
 
 class HBNBCommand(cmd.Cmd):
     """develop methods"""
+
+    classe = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
+          "Place": Place, "Review": Review, "State": State, "User": User}
+
     prompt = '(hbnb) '
 
     def do_EOF(self, line):
@@ -39,8 +40,8 @@ class HBNBCommand(cmd.Cmd):
     def do_create(self, line):
         if line == "" or line is None:
             print("** class name missing **")
-        elif line in classe.keys():
-            new_instance = classe[line]()
+        elif line in self.classe.keys():
+            new_instance = self.classe[line]()
             new_instance.save()
             print(new_instance.id)
         else:
@@ -51,7 +52,7 @@ class HBNBCommand(cmd.Cmd):
         if len(tokens) == 0:
             print("** class name missing **")
         else:
-            if tokens[0] in classe.keys():
+            if tokens[0] in self.classe.keys():
                 if len(tokens) == 1:
                     print("** instance id missing **")
                 else:
@@ -72,7 +73,7 @@ class HBNBCommand(cmd.Cmd):
         if len(tokens) == 0:
             print("** class name missing **")
         else:
-            if tokens[0] in classe.keys():
+            if tokens[0] in self.classe.keys():
                 if len(tokens) == 1:
                     print("** instance id missing **")
                 else:
@@ -97,7 +98,7 @@ class HBNBCommand(cmd.Cmd):
             for value in objects.values():
                 list_objects.append(str(value))
             print(list_objects)
-        elif line in classe.keys():
+        elif line in self.classe.keys():
             for key, value in objects.items():
                 if line in key:
                     list_objects.append(str(value))
@@ -113,9 +114,9 @@ class HBNBCommand(cmd.Cmd):
         floats = ['latitude', 'longitude']
         if len(tokens) == 0:
             print("** class name missing **")
-        elif len(tokens) == 1 and tokens[0] in self.classes.keys():
+        elif len(tokens) == 1 and tokens[0] in self.classe.keys():
             print("** instance id missing **")
-        elif tokens[0] not in classe.keys():
+        elif tokens[0] not in self.classe.keys():
             print("** class doesn't exist **")
         elif len(tokens) == 2:
             print("** attribute name missing **")
