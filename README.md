@@ -1,8 +1,6 @@
-# The Console 
-![Screenshot from 2022-07-06 21-52-39](https://user-images.githubusercontent.com/98775024/177680631-c36d8c5f-945a-4181-a0e4-2170ec6689cb.png)
+# The Console ![image](https://user-images.githubusercontent.com/98775024/177681244-f7019a04-380b-4f37-ae43-3fc7e4086fa6.png)
 
-
-# holbertonschool-AirBnB_clone
+![Screenshot from 2022-07-06 21-57-10](https://user-images.githubusercontent.com/98775024/177681066-d4a85ac7-d5b1-4d43-9475-4355494bdfc7.png)
 
 
 ## Description
