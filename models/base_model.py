@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""class BaseModel"""
+""" class BaseModel """
 
 import models
 import uuid
@@ -13,7 +13,7 @@ class BaseModel:
     this is the superclasse
     """
     def __init__(self, *args, **kwargs):
-        """Initialize BaseModel class"""
+        """ Initialize BaseModel class """
         if kwargs:
             for key, value in kwargs.items():
                 if key == "created_at":
@@ -29,12 +29,12 @@ class BaseModel:
             models.storage.new(self)
 
     def save(self):
-        """Updates the public instance attribute"""
+        """ Updates the public instance attribute """
         self.update_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
-        """Returns a dictionary containing all keys/values"""
+        """ Returns a dictionary containing all keys/values """
         new_dict = self.__dict__.copy()
         new_dict['__class__'] = type(self).__name__
         for key, value in new_dict.items():
@@ -43,5 +43,5 @@ class BaseModel:
         return new_dict
 
     def __str__(self):
-        """Returns a string BaseModel class"""
+        """ Returns a string BaseModel class """
         return f'[{self.__class__.__name__}] ({self.id}) {self.__dict__}'
