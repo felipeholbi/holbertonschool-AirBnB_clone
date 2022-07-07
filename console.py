@@ -137,6 +137,36 @@ class HBNBCommand(cmd.Cmd):
             if flag == 0:
                 print("** no instance found **")
 
+    def analyze(self, value):
+        """
+        Analyze the value and check if it
+        need to be converted to int or float
+        """
+        if value.isdigit():
+            return int(value)
+        if value.replace(".", "", 1).isdigit():
+            return float(value)
+        return value
+
+    def default(self, line):
+        """
+        If the command is not recognized, check
+        if the syntax is: <class name>.<method name> or not,
+        if the class name and the method name exists will be executed
+        """
+        if "." in line:
+            command = re.split(r"\.|\(|\)", line)
+
+            if command[0] in self.classes:
+                if command[1] == "show":
+                    self.do_show(f"{command[0]} {command[2][1:-1]}")
+                elif command[1] == "destroy":
+                    self.do_destroy(f"{command[0]} {command[2][1:-1]}")
+                elif command[1] == "count":
+                    print(len(self.get_instances(command[0])))
+                elif command[1] == "all":
+                    print(self.get_instances(command[0]))
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
