@@ -1,14 +1,13 @@
-![img](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20220706%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220706T102700Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=e9b06dc469139fadc270ac7be132dcf143907df53411bbc65bd529d12f144b32)
+# The Console 🔧
+
+![Screenshot from 2022-07-06 21-57-10](https://user-images.githubusercontent.com/98775024/177681066-d4a85ac7-d5b1-4d43-9475-4355494bdfc7.png)
 
 
-# holbertonschool-AirBnB_clone
-
-
-## Description
+## Description. 📝
 
 This is the first step towards building your first full web application: the AirBnB clone. This first step is very important because you will use what you build during this project with all other following projects: HTML/CSS templating, database storage, API, front-end integration…
 
-### Fucionalities
+### Fucionalities. 🧰
 
 * Create a new object (ex: a new User or a new Place)
 * Retrieve an object from a file, a database etc…
@@ -16,7 +15,7 @@ This is the first step towards building your first full web application: the Air
 * Update attributes of an object
 * Destroy an object
 
-## Files
+## Files. 🗂️
 
 | Name | Description |
 | ------------------------------ | -------------------------------------------- |
@@ -36,7 +35,7 @@ This is the first step towards building your first full web application: the Air
 |  |  |
 | | |
 
-## Console description.
+## Console description. 📋
 
 * ```quit``` - exits console
 * ```create``` - Creates a new instance of ```BaseModel```, saves it (to the JSON file) and prints the id.
@@ -47,22 +46,22 @@ This is the first step towards building your first full web application: the Air
 * ```update``` - Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file).
 
 
-## Requeriments
+## Requeriments. ⚙️
 
 All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
 
-## Install
+## Install. 💾
 
 * Clone https://github.com/alejuran/holbertonschool-    AirBnB_clone.git
 
 
-## Usage
+## Usage. 💿
 
 * Run the interactive mode: ```./console.py```
 * Run the non-interactive mode: ```echo "help" | ./console.py```
 
 
-### Examples
+### Examples. 🖇️
 
 * **Run console in interactive mode:**
 
@@ -104,7 +103,7 @@ EOF  help  quit
 $
 ```
 
-## Authors
+## Authors.
 
 <a href = 'https://www.github.com/Crisgrva'> <img width = '32px' align= 'center' src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/github.svg"/></a> [@alejuran](https://github.com/alejuran) | [@felipeholbi](https://github.com/felipeholbi)
 
