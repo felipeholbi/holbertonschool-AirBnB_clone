@@ -103,7 +103,7 @@ EOF  help  quit
 $
 ```
 
-## Authors. 🧿
+## Authors.
 
 <a href = 'https://www.github.com/Crisgrva'> <img width = '32px' align= 'center' src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/github.svg"/></a> [@alejuran](https://github.com/alejuran) | [@felipeholbi](https://github.com/felipeholbi)
 
