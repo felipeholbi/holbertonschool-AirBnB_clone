@@ -37,8 +37,9 @@ class BaseModel:
         """Returns a dictionary containing all keys/values"""
         new_dict = self.__dict__.copy()
         new_dict['__class__'] = type(self).__name__
-        new_dict['created_at'] = self.created_at.isoformat()
-        new_dict['update_at'] = self.update_at.isoformat()
+        for key, value in new_dict.items():
+            if isinstance(value, datetime):
+                new_dict[key] = value.isoformat()
         return new_dict
 
     def __str__(self):
