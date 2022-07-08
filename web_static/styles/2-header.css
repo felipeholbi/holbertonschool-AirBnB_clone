@@ -1,14 +1,5 @@
 header {
-    background-color: white;
-    border-bottom: 1px solid #CCCCCC;
+    background-color: #FF0000;
     height: 70px;
     width: 100%;
-    
-}
-
-.logo {
-    left: 20px;
-    vertical-align: center;
-    align-content: left;
-    position: absolute;
-}
+} 

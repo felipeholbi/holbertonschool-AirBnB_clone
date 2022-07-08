@@ -1,0 +1,13 @@
+header {
+    background-color: white;
+    border-bottom: 1px solid #CCCCCC;
+    height: 70px;
+    width: 100%;
+    
+}
+
+.logo {
+    left: 20px;
+    vertical-align: center;
+    position: absolute;
+}
